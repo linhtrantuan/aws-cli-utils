@@ -128,12 +128,12 @@ aws_ec2_connect_with_hint() {
 	aws_ssm_connection_ec2 $(local_aws_ec2_instance_id_peco_menu)
 }
 
-aws_ec2_connect_forwarding_for_rds_with_hint() {
+aws_ec2_connect_forwarding_for_rds_mysql_with_hint() {
 	local ec2_instance_id=$(local_aws_ec2_instance_id_peco_menu)
 	local rds_endpoint=$(local_aws_rds_endpoint_peco_menu)
 	echo "Enter your local port forwarding to the instance"
 	read local_port
-	aws_ssm_port_forwarding_ec2 $ec2_instance_id $rds_endpoint $local_port
+	aws_ssm_port_forwarding_ec2_for_rds_mysql $ec2_instance_id $rds_endpoint $local_port
 }
 
 aws_ec2_list_eips() {

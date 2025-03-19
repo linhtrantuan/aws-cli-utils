@@ -28,7 +28,7 @@ aws_ssm_connection_ec2() {
 
 }
 
-aws_ssm_port_forwarding_ec2_for_rds() {
+aws_ssm_port_forwarding_ec2_for_rds_mysql() {
         aws_ec2_instance_id=$1
         aws_rds_endpoint=$2
         local_port=$3
